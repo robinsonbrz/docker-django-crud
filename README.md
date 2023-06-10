@@ -32,9 +32,10 @@
     <div align="center">
     <br>
         <a href="https://www.linkedin.com/in/robinsonbrz/">
-            <img src="Movie List.jpg" width="600" height="auto">
+            <img src="https://raw.githubusercontent.com/robinsonbrz/robinsonbrz/main/static/img/docker.png"
+                            width="150" height="150" />
             <h3 align="left">
-                🚧 Projeto 🚀 concluído 🚧
+                🚧 Projeto 🚀  🚧
             </h3>
             <h3 align="left"> Features </h3>
             <div align="left">
