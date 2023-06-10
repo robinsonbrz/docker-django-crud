@@ -1,10 +1,10 @@
 # Boilerplate Docker Django Crud Postgres
 
-
-<div width="720">
-    <h1 align="left">Containers Docker individuais configurados com Django e PostgreSQL</h1>
-    <h2 align="left">Pronto para desenvolvimento e Debug com VsCode plugin DevContainer</h2>
-    <br>
+## Containers Docker individuais configurados com Django e PostgreSQL
+   
+### Pronto para desenvolvimento e Debug com VsCode plugin DevContainer
+    
+<br>
 <br>
             <table align="right">
                 </tr>
