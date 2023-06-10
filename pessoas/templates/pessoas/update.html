@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=H, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Crud Django Postgres</h1>
+    <div>
+        <h3>Edição do registro</h3>
+        {{pessoa.id}} {{pessoa.nome}}
+    </div>
+    <div>    
+        <form action="{% url 'update' pessoa.id %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="nome" value={{pessoa.nome}}>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+</html>

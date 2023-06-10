@@ -3,32 +3,31 @@ from . models import Pessoas
 
 # Create your views here.
 
-def pessoas(request):
+def home(request):
     pessoas = Pessoas.objects.all()
-    return render(request, 'index.html', {"pessoas":pessoas})
+    return render(request, 'pessoas/index.html', {"pessoas":pessoas})
 
-def salvar(request):
+
+def create(request):
     vnome = request.POST.get("nome")
     Pessoas.objects.create(nome=vnome)
-    # pessoas = Pessoas.objects.all()
-    # return render(request, 'index.html', {"pessoas":pessoas})
-    return redirect(pessoas)
+    return redirect(home)
 
 
-def editar(request, id):
+def edit(request, id):
     pessoa = Pessoas.objects.get(id=id)
-    return render(request, 'update.html', {"pessoa":pessoa})
+    return render(request, 'pessoas/update.html', {"pessoa":pessoa})
 
 
 def update(request, id):
     vnome = request.POST.get("nome")
-    
     pessoa = Pessoas.objects.get(id=id)
     pessoa.nome=vnome
     pessoa.save()
-    return redirect(pessoas)
+    return redirect(home)
+
 
 def delete(request, id):
     pessoa = Pessoas.objects.get(id=id)
     pessoa.delete()
-    return redirect(pessoas)
+    return redirect(home)

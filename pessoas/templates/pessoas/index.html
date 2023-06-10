@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=H, initial-scale=1.0">
+    <title>Crud Django</title>
+</head>
+<body>
+    <h1>Crud Django Postgres</h1>
+    <div>
+        <h2>Lista de pessoas cadastradas</h2>
+        <ul>
+            {% for pessoa in pessoas %}
+                <li>{{pessoa.id}} {{pessoa.nome}}
+                    <a href="{% url 'edit' pessoa.id %}">Editar</a> - 
+                    <a href="{% url 'delete' pessoa.id %}">Excluir</a>
+                </li>       
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>Cadastrar pessoa</h2>
+        <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name=nome>
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>
