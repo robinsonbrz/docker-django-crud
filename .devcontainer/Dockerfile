@@ -38,7 +38,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1 \
 RUN mkdir -p /workspace
 RUN chown -R $USERNAME:$USERNAME /workspace
 
-COPY requirements.txt /workspace
+COPY ./requirements.txt /workspace
 
 WORKDIR /workspace
 
