@@ -49,11 +49,33 @@
     <br>
 <h3> Para rodar o projeto</h3>
 
-```bash
-pip install -r requirements.txt
+Setup para debug com VsCode
 
-python manage.py runserver
+Instalar o plugin Dev Container
+
+CTRL + SHIFT + P
+
+Escolher a opção "Dev Containers: Rebuild Containers"
+
+Ou Selecionar Pelo poupUp do VsCode
+
+## Na raiz do projeto criar um arquivo .env com o seguinte conteúdo
+Edite conforme necessidade
+
 ```
+DB_ENGINE=django.db.backends.postgresql
+SECRET_KEY=chave-aleatoria-pessoal
+POSTGRES_PASSWORD=DB_PASSWD
+DEBUG=True
+DB_NAME=crud_django
+DB_USER=postgres
+DB_PASSWD=senhapostgres
+DB_HOST=crud_db
+DB_PORT=5432
+ALLOWED_HOSTS='localhost, 127.0.0.1'
+```
+
+
    <h3 align="left">Linguagens e ferramentas utilizadas:</h3>
     <br>
     <div align="left">
