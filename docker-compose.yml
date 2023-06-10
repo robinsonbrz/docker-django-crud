@@ -24,7 +24,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ..:/workspace:cached
+      - .:/workspace:cached
     env_file:
       - ./.env
     ports:
