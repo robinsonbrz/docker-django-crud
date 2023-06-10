@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+
+  crud_db:
+    container_name: crud_db
+    image: postgres
+    volumes:
+      - crud_pgdata:/var/lib/postgresql/data
+    env_file:
+      - ./.env
+    environment:
+      - POSTGRES_DB=$DB_NAME #  teste-django-docker
+      - POSTGRES_USER=$DB_USER #      postgres
+      - POSTGRES_PASSWORD=$DB_PASSWD #    postgres
+    ports: 
+      - 5466:5432
+
+  crud_backend:
+    depends_on:
+      - crud_db
+    container_name: crud_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    env_file:
+      - ./.env
+    ports:
+      - 8000:8000
+    command: sleep infinity
+
+volumes:
+  crud_pgdata:

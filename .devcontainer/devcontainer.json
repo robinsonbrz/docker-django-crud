@@ -1,0 +1,35 @@
+{
+	"name": "Crud Backend",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "crud_backend",
+	"workspaceFolder": "/workspace",
+
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"python.languageServer": "Pylance",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Enabled": true,
+		"python.testing.unittestEnabled": true,
+		"python.testing.autoTestDiscoverOnSaveEnabled": false,
+		"[python]": {
+			"editor.formatOnSave": true,
+			"editor.defaultFormatter": "ms-python.python"
+		},
+		"[json]": {
+			"editor.formatOnSave": true,
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},	
+	},
+
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"tht13.python",
+		"DavidAnson.vscode-markdownlint"
+	],
+
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
+
+	"remoteUser": "vscode"
+}
